@@ -10,5 +10,7 @@ const router = express.Router();
 router.post('/', requireAuth, requireRole('donor'), asyncHandler(ctrl.createDonation));
 router.get('/', requireAuth, requireRole('donor'), asyncHandler(ctrl.myDonations));
 router.get('/case/:caseId', requireAuth, requireRole('hospital', 'authority'), asyncHandler(ctrl.caseDonations));
+router.post('/:id/verify', requireAuth, requireRole('hospital', 'authority'), asyncHandler(ctrl.verifyDonation));
+router.post('/:id/reject', requireAuth, requireRole('hospital', 'authority'), asyncHandler(ctrl.rejectDonation));
 
 module.exports = router;
