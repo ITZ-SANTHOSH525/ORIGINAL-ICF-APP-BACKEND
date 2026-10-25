@@ -36,6 +36,8 @@ function mapCase(row, extras = {}) {
     hospitalEmail: row.hospital_email,
     doctorName: row.doctor_name,
     doctorRegNo: row.doctor_reg_no,
+    paymentUpiId: row.payment_upi_id || '',
+    paymentQrData: row.payment_qr_data || '',
     status: row.status,
     submittedDate: row.submitted_date,
     verifiedDate: row.verified_date,
