@@ -54,10 +54,13 @@ function mapDonation(row) {
     id: row.id,
     caseId: row.case_id,
     patient: row.patient,
+    donorName: row.donor_name || 'Donor',
     amount: row.amount,
     date: row.date,
     status: row.status,
     paymentRef: row.payment_ref,
+    verifiedAt: row.verified_at || '',
+    rejectionReason: row.rejection_reason || '',
   };
 }
 
